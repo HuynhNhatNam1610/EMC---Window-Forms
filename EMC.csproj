@@ -1,0 +1,241 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup> 
+    <OutputType>WinExe</OutputType> 
+    <TargetFramework>net9.0-windows</TargetFramework> 
+    <Nullable>enable</Nullable> 
+    <UseWindowsForms>true</UseWindowsForms> 
+    <ImplicitUsings>enable</ImplicitUsings> 
+    <PlatformTarget>x64</PlatformTarget> 
+    <BaseOutputPath></BaseOutputPath> 
+    <Platforms>AnyCPU;x64;x64</Platforms> 
+  </PropertyGroup> 
+  
+  <PropertyGroup> 
+    <PublishSingleFile>true</PublishSingleFile> 
+    <SelfContained>true</SelfContained> 
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier> 
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract> 
+  </PropertyGroup> 
+
+  <ItemGroup> 
+    <!-- Buộc tạo file EMC.exe.config từ App.config --> 
+    <None Include="App.config"> 
+    <TargetPath>EMC.exe.config</TargetPath> 
+    <CopyToOutputDirectory>Always</CopyToOutputDirectory> 
+    </None> 
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="UI\Resources\models\**" />
+    <Compile Remove="UI\Resources\uploads\photos\**" />
+    <EmbeddedResource Remove="UI\Resources\models\**" />
+    <EmbeddedResource Remove="UI\Resources\uploads\photos\**" />
+    <None Remove="UI\Resources\models\**" />
+    <None Remove="UI\Resources\uploads\photos\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="UI\Resources\Data\haarcascade_eye.xml" />
+    <None Remove="UI\Resources\Data\haarcascade_eye_tree_eyeglasses.xml" />
+    <None Remove="UI\Resources\Data\haarcascade_frontalface_default.xml" />
+    <None Remove="UI\Resources\icons\logo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="UI\Resources\Data\haarcascade_eye.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\Resources\Data\haarcascade_eye_tree_eyeglasses.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UI\Resources\Data\haarcascade_frontalface_default.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="UI\Resources\icons\logo.ico">
+      <CustomToolNamespace>EMC.UI.Resources</CustomToolNamespace>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Logs\" />
+    <Folder Include="Config\" />
+    <Folder Include="UI\Resources\uploads\logo\" />
+    <Folder Include="UI\Resources\uploads\sample_photo\before\" />
+    <Folder Include="UI\Resources\uploads\sample_photo\after\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Models\**\*">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AForge.Video" Version="2.2.5" />
+    <PackageReference Include="AForge.Video.DirectShow" Version="2.2.5" />
+    <PackageReference Include="DocumentFormat.OpenXml" Version="3.3.0" />
+    <PackageReference Include="Emgu.CV" Version="4.12.0.5764" />
+    <PackageReference Include="Emgu.CV.runtime.windows" Version="4.12.0.5764" />
+    <PackageReference Include="Emgu.CV.UI" Version="4.12.0.5764" />
+    <PackageReference Include="EmguCV.221.x86" Version="1.0.0" />
+    <PackageReference Include="EPPlus" Version="8.2.0" />
+    <PackageReference Include="HIC.System.Windows.Forms.DataVisualization" Version="1.0.1" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.4" />
+    <PackageReference Include="Krypton.Toolkit" Version="95.25.8.235" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
+    <PackageReference Include="Microsoft.ML" Version="4.0.3" />
+    <PackageReference Include="Microsoft.ML.FastTree" Version="4.0.3" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+    <PackageReference Include="Siticone.Desktop.UI" Version="2.1.1" />
+    <PackageReference Include="System.Speech" Version="9.0.9" />
+    <PackageReference Include="Vosk" Version="0.3.38" />
+    <PackageReference Include="Whisper.net" Version="1.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="UI\Resources\icons\audio.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\avatar_transparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\edit.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\eye.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\faceid.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\faceid.webp">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\lock.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\login.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\mic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\microphone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\phone.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\search.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\Search3.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\trash.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\icons\view.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\5922_anhb4-jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\avatar_transparent.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\banner.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\banner1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\banner2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\banner3.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\banner4.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\envir.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\envir1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\envir2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\loading.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\login.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\login.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\mauloang.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\quantrac.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\quantrac1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\quantrac2.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\saveus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\spinner_green.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\images\xanhpastel.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\uploads\anhthe.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\uploads\avatar\anhthe.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\uploads\avatar\anhthe1.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\uploads\avatar\person.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="UI\Resources\uploads\logo\logo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

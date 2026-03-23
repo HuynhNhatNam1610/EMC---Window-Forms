@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>D:\NAM3_2025-2026\NAM1_HK1_2025-2026\CNPM_HK1_2025-2026\BAO_CAO\EMC11_10v2\EMC\Properties\PublishProfiles\FolderProfile1.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Update="UI\Controls\ActionButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\CameraGuideOverlay.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\CirclePictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\CustomDrawnComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\DateTimeDropDown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\DotBadge.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\Line.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\PlaceholderTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\PlaceholderTextBox2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\RoundedButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\RoundedCombobox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\RoundedDateTime.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\RoundedPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\RoundedPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\RoundedTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\SuccessTick.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Controls\TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\AccountControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\BusinessControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\EmailScheduleSettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fAdd&amp;EditStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fAddAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fAddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fAdd_EditContract.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fAdd_EditParameters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fAdd_EditSample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fAdd_EditStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fBusiness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fCustomerDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fEditAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fFaceScan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fOrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fPersonalPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fPersonnelManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fPhotoPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fPlanning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fRatingChart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fSampleListDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\fSampleSelectionModal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\ImagePreviewDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\NotificationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\PasswordPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\PersonalInfoControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\PlanningControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\RatingChartControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\ResultControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\SidebarControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="UI\Forms\StaffManagementControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

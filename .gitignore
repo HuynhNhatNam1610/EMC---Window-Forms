@@ -1,0 +1,7 @@
+.vs/
+bin/
+obj/
+*.exe
+*.zip
+*.log
+Models/vosk-model-vi-0.4/
